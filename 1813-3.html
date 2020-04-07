@@ -1,0 +1,383 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ENTER EXIT</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="slideshow.css">
+    <link rel="stylesheet" href="modalImg.css">
+    <link rel="stylesheet" href="1061813-2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <style>
+        
+        body {
+            background-size: cover;
+            font-family:微軟正黑體;
+        }
+        .divImg{
+            width: 550px;
+            transform: rotate(3deg);
+        }
+        .divImg:hover{            
+            transform: rotate(-5deg);
+        }
+        .divImg img{
+            width: 100%;
+        }
+        .divText{
+            width: 550px;
+            border: 5px solid #003C9D;
+            box-shadow: 5px 5px 5px #77FFEE;
+            text-align: justify;
+            padding: 10px;
+            margin: 0px 0px;
+            box-sizing:border-box;
+            font-family:微軟正黑體;
+        }
+        
+        #container{
+            width: 900px;            
+            margin: 0px auto;
+        }
+        #header{
+            background-color: paleturquoise;
+            height: 150px;
+        }
+        #nav{            
+            background-color:#CCBBFF;
+            height: 50px;
+            width:100%;
+            text-align: center;
+        }
+        #sidebar{
+            background-color: lightgoldenrodyellow;         
+            width: 100px;
+            height: 200px;
+            float: left;
+        }
+        #main{            
+            background-color: lavenderblush;            
+            width: 700px;                       
+            margin-left: 200px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        
+        #nav ul{
+            margin: 0px;
+            list-style:none;
+            display: inline-block;
+            text-align: center;
+        }
+        #nav li{
+            display:inline-block;
+            margin-left: 20px;
+        }
+        
+        #nav a{
+            display: block;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            background-color: #9370DB;
+            line-height: 50px;
+            padding-left: 30px; 
+            padding-right: 30px; 
+        }
+        #nav a:hover{
+            background-color: #FFFFBB;
+            color:#4682B4;
+            font-weight: bolder;
+        }
+        
+        .setFix{
+            position: fixed;
+            top: 0;
+            left :0px;
+            z-index: 1;
+            text-align: center;
+        }
+        
+        #nav ul ul{
+            display: none;
+            background-color:aqua;
+            position: absolute;
+            z-index: 1;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            text-align: center;
+        }
+        
+        #nav li:hover ul{
+            display: block;
+        }
+        
+        #nav li li{
+            margin: 0px;
+            padding: 0px;
+            display: block;
+            width: 128px;
+        }
+        
+        #nav li li a{
+            color: #FFFFFF;
+        }
+        
+        /* Tooltip container */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+        }
+
+/* Tooltip text */
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color:rgba(255,215,0,0.69);
+            color:darkblue;
+            text-align: center;
+            padding: 5px 0;
+            border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+            position: absolute;
+            z-index: 1;
+            top: -5px;
+            left: 105%;
+        }
+
+/* Show the tooltip text when you mouse over the tooltip container */
+        .tooltip:hover .tooltiptext {
+          visibility: visible;
+        }
+       
+        .pagination{
+           margin-bottom: 40px;
+            font-size: 20px;
+        }
+        
+        .pagination a {
+          color:blueviolet;
+          padding: 8px 16px;
+          text-decoration: none;
+          border-radius: 6px;
+          
+        }
+        
+        .pagination a.active{
+            background-color:cornflowerblue;
+            color: coral;
+            font-weight: bold;
+        }
+        
+        .pagination a:hover:not(.active){
+            background-color:bisque;
+            color: darkseagreen;
+        }
+        
+         #footer{
+            background-color: #CCBBFF;
+            height: 100px;
+            clear: both;
+            text-align: center;
+            padding-top: 15px;
+            box-sizing: border-box;
+        }
+        
+        .footIcon{
+            display: inline-block;
+            margin: 10px;
+        }
+        .footIcon img{
+            width: 40px;            
+        }
+
+
+        
+    </style>
+</head>
+<body background="img/img/purple/01.jpg">	
+   <div id="container">
+       <div style="text-align: center;"><a  href="index.html"><img src="img/img/purple/%E6%A9%AB%E6%A2%9D.jpg" width="900"></a></div>
+     
+        <div class="slideshow-container">
+        <table>
+        <tr height="50">
+			<td bgcolor="#a6a6d2" nowrap align="center" width="25%">
+			<a  href="1813-1.html">團名由來</a></td>
+			<td bgcolor="#b9b9ff" nowrap align="center" width="25%">
+			<a href="1813-2.html">樂團簡介</a></td>
+			<td bgcolor="#d8d8eb" nowrap align="center" width="25%">
+			<a href="1813-3.html">成員介紹</a></td>
+			<td bgcolor="#ececff" nowrap align="center" width="25%">
+			<a href="1813-4.html">專輯產品</a></td>
+		</tr>
+        </table>
+        </div>
+
+        <div id="st1" class="st" style="height: auto">
+         <div class="inner">
+          <h1 style="color:#5151a2">成員介紹&nbsp; &nbsp; ｜&nbsp; &nbsp; ENTER&nbsp; EXIT</h1>
+          <img src="img/img/%E4%B8%BB%E5%94%B1.jpg" width="180" height="353"style="float: left">
+            <h2 id="01" style="color:#DDAA00">主唱&團長&nbsp; &nbsp; ｜&nbsp; &nbsp; 程離莫</h2>
+             <p style="color:#AA7700">
+                 <br><br>
+                 生日：7/25<br>
+                 星座：獅子座<br>
+                 血型：b型<br>
+                 代表色：金，白<br>
+                 個性：自傲，明朗，感情熱烈<br>
+                 專輯名稱：ESCAPE FROM THE DARK<br>
+                 專輯敘述：勵志型歌曲，鼓勵人們不要受外界的束縛勇敢做自己
+                 <br><br><br>
+        </p>
+             
+            <img src="img/img/%E5%90%89%E4%BB%96.jpg" width="200" style="float: right">
+            <h2 id="02" style="color:#FF8C00">吉他&nbsp; &nbsp; ｜&nbsp; &nbsp;陸顏毅</h2>
+             <p style="color:#D2691E">
+                 <br><br>
+                 生日：12/29<br>
+                 星座：摩羯座<br>
+                 血型：ab型<br>
+                 代表色：橘，紅，黃<br>
+                 個性：性格保守，謹慎而馴良<br>
+                 專輯名稱：喂繫<br>
+                 專輯敘述：表達對家人的情感及愛意
+                 <br><br><br>
+        </p>
+             <img src="img/img/%E8%B2%9D%E6%96%AF.jpg" width="200"  height="353" style="float: left">
+            <h2 id="03" style="color:#FFB6C1">貝斯&nbsp; &nbsp; ｜&nbsp; &nbsp;虞翔</h2>
+             <p style="color:#FF69B4">
+                 <br><br>
+                 生日：11/18<br>
+                 星座：天蠍座<br>
+                 血型：a型<br>
+                 代表色：粉，青綠<br>
+                 個性：愛恨分明、佔有慾強<br>
+                 專輯名稱：如果這叫做戀愛<br>
+                 專輯敘述：描述戀愛時的甜蜜幸福
+                 <br><br><br>
+        </p>
+             <img src="img/img/鼓手.jpg" width="200" height="353" style="float: right">
+            <h2 id="04" style="color:#5599FF">鼓手&nbsp; &nbsp; ｜&nbsp; &nbsp;方項宇</h2>
+             <p style="color:#0066FF">
+                 <br><br>
+                 生日：11/30<br>
+                 星座：射手座<br>
+                 血型：o型<br>
+                 代表色：藍<br>
+                 個性：博學、樂觀、愛冒險<br>
+                 專輯名稱：WHEN YOU HERE<br>
+                 專輯敘述：談論朋友之間無形的牽絆
+                 <br><br><br>
+        </p>
+            </div></div>
+       
+        <div id="footer">
+          <div class="footIcon">
+              <a href="https://www.facebook.com/profile.php?id=100002180772672"  target="_blank"><img src="img/img/facebook.png"></a>
+          </div>
+          <div class="footIcon">
+              <a href="https://plus.google.com/u/0/114673265932261163939" target="_blank"><img src="img/img/google.png"></a>
+          </div>
+          <div class="footIcon">
+              <a href="https://www.instagram.com/anneday0531/
+" target="_blank"><img src="img/img/instagram.png"></a>
+          </div>
+          <div class="footIcon">
+              <a href="https://weibo.com/p/1005056384165280/home?from=page_100505&mod=TAB&is_all=1#place
+" target="_blank"><img src="img/img/weibo.png"></a>
+          </div>
+      </div>        
+      
+      <div id="nav">          
+          <ul>
+              <li><a href="index.html">首頁</a></li>
+              <li><a href="1813-1.html">團名由來</a></li>
+              <li><a href="1813-2.html">團體簡介</a></li>
+              <li><a href="1813-3.html">成員介紹</a>
+              <ul>
+                      <li><a href="#01">主唱</a></li>
+                      <li><a href="#02">貝斯</a></li>
+                      <li><a href="#03">吉他</a></li>
+                      <li><a href="#04">鼓手</a></li>
+                  </ul>
+              </li>
+              <li><a href="1813-4.html">專輯產品</a></li>
+          </ul>
+      </div>
+    </div>
+
+    
+
+    <script>
+        jQuery("document").ready(function ($) {
+
+            $(window).scroll(function () {
+                if ($(this).scrollTop() > 15) {
+                    $('#nav').addClass("setFix");
+                } else {
+                    $('#nav').removeClass("setFix");
+                }
+            });
+
+        });
+    </script>
+    
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("dot");
+          if (n > slides.length) {slideIndex = 1}    
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";  
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";  
+          dots[slideIndex-1].className += " active";
+        }
+    </script>
+    
+    <script>
+            // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src="img/f.jpg";
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+</script> 
+       
+</body>
+</html>
